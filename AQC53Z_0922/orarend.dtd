@@ -2,7 +2,7 @@
 [
 <!ELEMENT orarend (ora)>
 <!ELEMENT ora (targy, idopont, helyszin, oktato, szak)>
-<!ATTLIST ora id ID>
+<!ATTLIST ora id ID #REQUIRED>
 <!ELEMENT idopont (nap, tol, ig)>
 <!ELEMENT targy (#PCDATA)>
 <!ELEMENT idopont (#PCDATA)>
