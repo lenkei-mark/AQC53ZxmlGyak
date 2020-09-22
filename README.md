@@ -1,1 +1,1 @@
-# Adatkezelés XML gyakorlati feladatok
+# Adatkezelés XML-ben gyakorlati feladatok
