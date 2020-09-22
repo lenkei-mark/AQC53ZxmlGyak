@@ -1,7 +1,7 @@
 <!DOCTYPE adatbazis
 [
 <!ELEMENT adatbazis (nev, fizetes)>
-<!ATTLIST adatbazis kod number ID>
+<!ATTLIST adatbazis kod ID>
 <!ELEMENT nev (#PCDATA)>
 <!ELEMENT fizetes (#PCDATA)>
 ]>

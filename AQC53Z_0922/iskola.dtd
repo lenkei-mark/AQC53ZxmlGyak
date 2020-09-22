@@ -2,9 +2,9 @@
 [
 <!ELEMENT iskola (tanar, tantargy)>
 <!ELEMENT tanar (nev, szak)>
-<!ATTLIST tanar kod number ID>
+<!ATTLIST tanar kod ID>
 <!ELEMENT tantargy (tnev, osztaly)>
-<!ATTLIST tantargy oktato number IDREF>
+<!ATTLIST tantargy oktato IDREF>
 <!ELEMENT nev (#PCDATA)>
 <!ELEMENT szak (#PCDATA)>
 <!ELEMENT tnev (#PCDATA)>
