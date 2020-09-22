@@ -1,0 +1,15 @@
+<!DOCTYPE orarend
+[
+<!ELEMENT orarend (ora)>
+<!ELEMENT ora (targy, idopont, helyszin, oktato, szak)>
+<!ATTLIST ora id, tipus>
+<!ELEMENT idopont (nap, tol, ig)>
+<!ELEMENT targy (#PCDATA)>
+<!ELEMENT idopont (#PCDATA)>
+<!ELEMENT helyszin (#PCDATA)>
+<!ELEMENT oktato (#PCDATA)>
+<!ELEMENT szak (#PCDATA)>
+<!ELEMENT nap (#PCDATA)>
+<!ELEMENT tol (#PCDATA)>
+<!ELEMENT ig (#PCDATA)>
+]>

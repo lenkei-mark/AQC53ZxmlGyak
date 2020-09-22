@@ -1,0 +1,14 @@
+<!DOCTYPE adatbazis
+[
+<!ELEMENT adatbazis (nev, fizetes)>
+<!ATTLIST adatbazis kod number ID>
+<!ELEMENT nev (#PCDATA)>
+<!ELEMENT fizetes (#PCDATA)>
+]>
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<adatbazis kod="">
+	<nev></nev>
+	<fizetes></fizetes>
+</adatbazis>

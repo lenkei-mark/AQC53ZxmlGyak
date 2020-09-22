@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<iskola>
+	<tanar kod="1">
+		<nev>Kiss Béla</nev>
+		<szak>Programtervező Informatikus</szak>
+	</tanar>
+	<tanar kod="2">
+		<nev>Nagy László</nev>
+		<szak>Programtervező Informatikus</szak>
+	</tanar>
+	<tantargy kod="11" oktato="1">
+		<tantargy_neve>Analízis</tantargy_neve>
+		<osztaly>G1_BP1</osztaly>
+	</tantargy>
+</iskola>
