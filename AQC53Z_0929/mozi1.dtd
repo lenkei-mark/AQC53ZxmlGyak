@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE mozi
+[
+<!ELEMENT mozi (film)>
+<!ELEMENT film(rendezo, szinez, iro)>
+<!ELEMENT rendezo(#PCDATA)>
+<!ELEMENT szinesz(#PCDATA)>
+<!ELEMENT iro(#PCDATA)>
+<!ATTLIST 
+    rendezo id ID #REQUIRED
+    rendezo nev CDATA #REQUIRED
+    szinesz id ID #REQUIRED
+    szinesz nev CDATA #REQUIRED
+    iro id ID #REQUIRED
+    film id ID #REQUIRED
+    film mufaj CDATA #REQUIRED>
+]
+>
