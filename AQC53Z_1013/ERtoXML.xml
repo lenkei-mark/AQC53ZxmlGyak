@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modell xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ERtoXSD.xsd">
+    <A a="1">
+        <b>
+            <x>x1</x>
+            <y>y1</y>
+        </b>
+        <b>
+            <x>x2</x>
+            <y>y2</y>
+        </b>
+        <c>
+            <unknown1>ismeretlen1</unknown1>
+            <unknown2>imseretlen2</unknown2>
+        </c>
+    </A>
+    <kapcsolotabla_AB Aref="1" Bref="2">
+        <c>kapcsolo c</c>
+    </kapcsolotabla_AB>
+    <B a="2">
+        <b>
+            <x>x2</x>
+            <y>y3</y>
+        </b>
+    </B>
+    <kapcsolotabla_BC Bref="2" Cref="3" />
+    <C a="3">
+        <b>b</b>
+    </C>
+</modell>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="modell">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="A" type="A_type" />
+                <xs:element name="kapcsolotabla_AB" type="AB_kapcsolotabla_type" />
+                <xs:element name="B" type="B_type" />
+                <xs:element name="kapcsolotabla_BC" type="BC_kapcsolotabla_type" />
+                <xs:element name="C" type="C_type" />
+            </xs:sequence>
+        </xs:complexType>
+        <xs:key name="A_key">
+            <xs:selector xpath="A" />
+            <xs:field xpath="@a" />
+        </xs:key>
+        <xs:key name="B_key">
+            <xs:selector xpath="B" />
+            <xs:field xpath="@a" />
+        </xs:key>
+        <xs:key name="C_key">
+            <xs:selector xpath="C" />
+            <xs:field xpath="@a" />
+        </xs:key>
+        <xs:keyref refer="A_key" name="AB_A_keyref">
+            <xs:selector xpath="kapcsolotabla_AB" />
+            <xs:field xpath="@Aref" />
+        </xs:keyref>
+        <xs:keyref refer="B_key" name="AB_B_keyref">
+            <xs:selector xpath="kapcsolotabla_AB" />
+            <xs:field xpath="@Bref" />
+        </xs:keyref>
+        <xs:keyref refer="B_key" name="BC_B_keyref">
+            <xs:selector xpath="kapcsolotabla_BC" />
+            <xs:field xpath="@Bref" />
+        </xs:keyref>
+        <xs:keyref refer="C_key" name="BC_A_keyref">
+            <xs:selector xpath="kapcsolotabla_BC" />
+            <xs:field xpath="@Cref" />
+        </xs:keyref>
+    </xs:element>
+    <xs:complexType name="A_type">
+        <xs:sequence>
+            <xs:element name="b" type="b_type" minOccurs="1" maxOccurs="unbounded" />
+            <xs:element name="c" type="c_type" />
+        </xs:sequence>
+        <xs:attribute name="a" type="xs:integer" use="required" />
+    </xs:complexType>
+    <xs:complexType name="b_type">
+        <xs:sequence>
+            <xs:element name="x" type="xs:string" />
+            <xs:element name="y" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="c_type">
+        <xs:sequence>
+            <xs:element name="unknown1" type="xs:string" />
+            <xs:element name="unknown2" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="AB_kapcsolotabla_type">
+        <xs:sequence>
+            <xs:element name="c" type="xs:string" />
+        </xs:sequence>
+        <xs:attribute name="Aref" type="xs:integer" use="required" />
+        <xs:attribute name="Bref" type="xs:integer" use="required" />
+    </xs:complexType>
+    <xs:complexType name="B_type">
+        <xs:sequence>
+            <xs:element name="b" type="b_type" />
+        </xs:sequence>
+        <xs:attribute name="a" type="xs:integer" use="required" />
+    </xs:complexType>
+    <xs:complexType name="BC_kapcsolotabla_type">
+        <xs:attribute name="Bref" type="xs:integer" use="required" />
+        <xs:attribute name="Cref" type="xs:integer" use="required" />
+    </xs:complexType>
+    <xs:complexType name="C_type">
+        <xs:sequence>
+            <xs:element name="b" type="xs:string" />
+        </xs:sequence>
+        <xs:attribute name="a" type="xs:integer" use="required" />
+    </xs:complexType>
+</xs:schema> 
