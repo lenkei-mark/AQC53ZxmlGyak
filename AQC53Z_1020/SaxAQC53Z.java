@@ -15,10 +15,7 @@ public class UserHandler extends DefaultHandler {
    public void startElement(String uri, 
    String localName, String qName, Attributes attributes) throws SAXException {
 
-      if (qName.equalsIgnoreCase("student")) {
-         String rollNo = attributes.getValue("rollno");
-         System.out.println("Roll No : " + rollNo);
-      } else if (qName.equalsIgnoreCase("szemely")) {
+    if (qName.equalsIgnoreCase("szemely")) {
          bszemely = true;
       } else if (qName.equalsIgnoreCase("nev")) {
          bnev = true;
