@@ -4,5 +4,20 @@
         <firstname>Alexandra</firstname>
         <lastname>Fekete</lastname>
         <nickname>alefek</nickname>
+        <age>20</age>
+    </student>
+
+    <student rollno="493">
+        <firstname>Alex</firstname>
+        <lastname>Toth</lastname>
+        <nickname>toti</nickname>
+        <age>21</age>
+    </student>
+
+    <student rollno="593">
+        <firstname>David</firstname>
+        <lastname>Balogh</lastname>
+        <nickname>davi</nickname>
+        <age>24</age>
     </student>
 </class>
