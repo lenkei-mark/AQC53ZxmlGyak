@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+</head>
+
+<body>
+    <h1>JSON megvalósítása - JavaScript</h1>
+    <div id="books"></div>
+    <hr>
+    <div id="details"></div>
+    <hr>
+    <script>
+        const json =
+        {
+            "book": {
+                "element": [
+                    {
+                        "author": "Nyékyné Dr. Gaizler Judit",
+                        "language": "Java 2 I-II. - Útikalauz programozóknak 5.0"
+                    },
+                    {
+                        "author": "Kovács László",
+                        "language": "Adatkezelés XML környezetbe"
+                    }
+                ]
+            }
+        };
+
+        const books = document.getElementById("books");
+        const details = document.getElementById("details");
+
+        json.book.element.forEach(book => {
+            p = document.createElement("p");
+            b = document.createElement("b");
+            text = document.createTextNode("Language: " + book.language);
+            p.appendChild(b);
+            b.appendChild(text);
+            books.appendChild(p);
+
+            p = document.createElement("p");
+            b = document.createElement("b");
+            text = document.createTextNode("Author: " + book.author);
+            p.appendChild(b);
+            b.appendChild(text);
+            books.appendChild(p);
+        });
+
+        text = document.createTextNode(`${json.book.element[0].language} OOP, a könyv szerzője: ${json.book.element[0].author}`);
+        details.appendChild(text);
+    </script>
+</body>
+
+</html>
